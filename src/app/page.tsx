@@ -1,104 +1,139 @@
-// import Image from "next/image";
+import React from "react";
+import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <h1>Bagelicious123</h1>
-    // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-    //   <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-    //     <Image
-    //       className="dark:invert"
-    //       src="/next.svg"
-    //       alt="Next.js logo"
-    //       width={180}
-    //       height={38}
-    //       priority
-    //     />
-    //     <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-    //       <li className="mb-2 tracking-[-.01em]">
-    //         Get started by editing{" "}
-    //         <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-    //           src/app/page.tsx
-    //         </code>
-    //         .
-    //       </li>
-    //       <li className="tracking-[-.01em]">
-    //         Save and see your changes instantly.
-    //       </li>
-    //     </ol>
+    <>
+      <Head>
+        <title>Bagel Haven - Fresh Bagels Daily</title>
+        <meta
+          name="description"
+          content="Welcome to Bagel Haven - Artisanal Bagels in the heart of the city"
+        />
+      </Head>
 
-    //     <div className="flex gap-4 items-center flex-col sm:flex-row">
-    //       <a
-    //         className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-    //         href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         <Image
-    //           className="dark:invert"
-    //           src="/vercel.svg"
-    //           alt="Vercel logomark"
-    //           width={20}
-    //           height={20}
-    //         />
-    //         Deploy now
-    //       </a>
-    //       <a
-    //         className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-    //         href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         Read our docs
-    //       </a>
-    //     </div>
-    //   </main>
-    //   <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-    //     <a
-    //       className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="/file.svg"
-    //         alt="File icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Learn
-    //     </a>
-    //     <a
-    //       className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="/window.svg"
-    //         alt="Window icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Examples
-    //     </a>
-    //     <a
-    //       className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="/globe.svg"
-    //         alt="Globe icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Go to nextjs.org →
-    //     </a>
-    //   </footer>
-    // </div>
+      <div className="bg-yellow-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Section */}
+          <div className="bg-yellow-100 rounded-xl shadow-lg overflow-hidden">
+            <div className="md:flex">
+              <div className="md:flex-1 p-8 md:p-12 flex flex-col justify-center">
+                <h1 className="text-4xl md:text-5xl font-bold text-yellow-800 mb-4">
+                  Freshly Baked Artisanal Bagels
+                </h1>
+                <p className="text-lg md:text-xl text-yellow-700 mb-8">
+                  Handcrafted with love since 1995. Enjoy the perfect
+                  combination of crispy exterior and chewy inside.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/menu"
+                    className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg text-center transition-colors duration-300"
+                  >
+                    View Our Menu
+                  </Link>
+                  <Link
+                    href="/location"
+                    className="bg-white hover:bg-gray-100 text-yellow-700 font-bold py-3 px-6 rounded-lg text-center transition-colors duration-300 border border-yellow-300"
+                  >
+                    Find Our Store
+                  </Link>
+                </div>
+              </div>
+              <div className="md:flex-1">
+                <div className="h-64 md:h-full relative">
+                  <div className="absolute inset-0 bg-yellow-300 opacity-50 md:opacity-0"></div>
+                  <img
+                    src="https://img1.wsimg.com/isteam/stock/47050/:/rs=w:740,cg:true,m"
+                    alt="Assorted bagels"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Bagels */}
+          <div className="mt-16">
+            <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+              Our Most Popular Bagels
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "Everything Bagel",
+                  price: "$3.25",
+                  image:
+                    "https://img1.wsimg.com/isteam/ip/cc80bcd2-67f9-40c9-b015-755584506398/bagel_tray-removebg-preview.png/:/rs=w:645,cg:true,m",
+                },
+                {
+                  name: "Sesame Seed Bagel",
+                  price: "$2.95",
+                  image:
+                    "https://img1.wsimg.com/isteam/ip/cc80bcd2-67f9-40c9-b015-755584506398/bagel_tray-removebg-preview.png/:/rs=w:645,cg:true,m",
+                },
+                {
+                  name: "Blueberry Bagel",
+                  price: "$3.50",
+                  image:
+                    "https://img1.wsimg.com/isteam/ip/cc80bcd2-67f9-40c9-b015-755584506398/bagel_tray-removebg-preview.png/:/rs=w:645,cg:true,m",
+                },
+              ].map((bagel, i) => (
+                <div
+                  key={i}
+                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                >
+                  <img
+                    src={bagel.image}
+                    alt={bagel.name}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="text-xl font-semibold text-gray-800">
+                      {bagel.name}
+                    </h3>
+                    <p className="text-yellow-600 font-bold mt-2">
+                      {bagel.price}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <Link
+                href="/menu"
+                className="inline-block text-yellow-600 hover:text-yellow-800 font-semibold text-lg"
+              >
+                See our full menu →
+              </Link>
+            </div>
+          </div>
+
+          {/* Store Hours */}
+          <div className="mt-16 bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+              Store Hours
+            </h2>
+            <div className="max-w-md mx-auto">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-right font-medium text-gray-600">
+                  Monday - Friday:
+                </div>
+                <div>6:00 AM - 4:00 PM</div>
+                <div className="text-right font-medium text-gray-600">
+                  Saturday:
+                </div>
+                <div>7:00 AM - 5:00 PM</div>
+                <div className="text-right font-medium text-gray-600">
+                  Sunday:
+                </div>
+                <div>8:00 AM - 3:00 PM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
