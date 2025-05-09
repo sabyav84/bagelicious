@@ -1,8 +1,13 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  distDir: "dist",
+  // swcMinify: true,
   images: {
+    loader: "akamai",
+    path: "",
     domains: ["api.placeholder.com"],
+    unoptimized: true,
   },
   output: "export",
 };

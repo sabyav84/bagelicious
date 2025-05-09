@@ -121,7 +121,7 @@ export default function Location() {
               store location.
             </p>
             <p className="text-gray-600">
-              The Westside location offers street parking and there's a public
+              The Westside location offers street parking and there is a public
               parking garage one block away on Oak Street.
             </p>
           </div>

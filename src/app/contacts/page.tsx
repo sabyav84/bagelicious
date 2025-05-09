@@ -20,8 +20,8 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We'd love to hear from you! Reach out with questions, comments, or
-              catering inquiries.
+              We would love to hear from you! Reach out with questions,
+              comments, or catering inquiries.
             </p>
           </div>
 
